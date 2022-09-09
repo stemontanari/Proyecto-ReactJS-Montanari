@@ -1,4 +1,6 @@
+import React from "react";
 import "./Header.css";
+import CartWidget from "../header/CartWidget";
 
 function Header() {
     return (
@@ -18,8 +20,10 @@ function Header() {
           </li>
         </ul>
         <img src="/media/imagenLogo.jpg" className="logo" alt="logo"/>
+        <CartWidget/>
       </header>
     );
   }
 
   export default Header;
+  

@@ -1,14 +1,14 @@
 import './App.css';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
-import Section1 from './components/section1/Section1';
+import ItemListContainer from './components/productos/ItemListContainer';
 
 function App() {
 
   return (
     <div className="App">
     <Header/>
-    <Section1/>
+    <ItemListContainer greeting="NUESTROS CALZADOS"/>
     <Footer/>
     </div>
   );
