@@ -1,5 +1,4 @@
 import "./card.css"
-import Button from "../button/Button";
 import ItemCounter from "../itemCounter/ItemCounter"
 
 function Card(props) {
@@ -14,7 +13,7 @@ function Card(props) {
                 <p> {description}</p>
                 <h4> $ {price} </h4>
             </div>
-            <Button text=" Agregar al carrito" />
+
             <ItemCounter initial={1} stock={9}/>
         </div>
     )
