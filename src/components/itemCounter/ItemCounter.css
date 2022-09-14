@@ -1,0 +1,21 @@
+.itemCount{
+    border: 2px black solid;
+    width: 30%;
+    margin-bottom: 5px;
+    margin-left: 35%;
+    border-radius: 5px;
+}
+
+.itemSubstract{
+    background-color: #BBA44F;
+    border: 0px;
+    cursor: pointer;
+    margin-right: 17%;
+}
+
+.itemAdd{
+    background-color: #BBA44F;
+    border: 0px;
+    margin-left: 17%;
+    cursor: pointer;
+}
