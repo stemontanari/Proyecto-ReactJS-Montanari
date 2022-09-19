@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import CartWidget from "../header/CartWidget";
 
+
 function Header() {
     return (
       <header className="header">
@@ -19,7 +20,7 @@ function Header() {
             <a href="/react1/public/index.html">Productos</a>
           </li>
         </ul>
-        <img src="/media/imagenLogo.jpg" className="logo" alt="logo"/>
+        <img src="https://systux.com.ar/julio/cool.svg" className="logo" alt="logo"/>
         <CartWidget/>
       </header>
     );

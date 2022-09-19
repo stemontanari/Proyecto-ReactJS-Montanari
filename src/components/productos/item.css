@@ -1,15 +1,15 @@
-.card-img{
+.Item-img{
     margin: 5px;
     width: 300px;
     height: 250px;
     object-fit: cover;
   }
-  .card-img img{
+  .Item-img img{
     width: 100%;
     height: 100%;
     
   }
-  .card{
+  .Item{
     display: inline-block;
     margin: 10px 15px;
     min-height: 500px;
@@ -25,11 +25,11 @@
     background-color: #BBA44F;
   }
   
-  .card:hover{
+  .Item:hover{
     transform: translateY(-6px);
   }
   
-  .card-detail{
+  .Item-detail{
     padding: 12px 8px;
   }
   
@@ -42,19 +42,19 @@
     font-family: 'Raleway', sans-serif;
   }
 
-  .card h3{
+  .Item h3{
     font-size: 1.3rem;
     font-family: 'Raleway', sans-serif;
     margin-bottom: 5px;
   }
   
-  .card h4{
+  .Item h4{
     font-size: 1.3rem;
     font-family: 'Raleway', sans-serif;
     margin-bottom: 5px;
   }
   
-  .card p{
+  .Item p{
     font-size: 1rem;
     font-family: 'Raleway', sans-serif;
     margin-bottom: 5px;
