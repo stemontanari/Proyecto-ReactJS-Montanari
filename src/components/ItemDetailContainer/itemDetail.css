@@ -1,0 +1,47 @@
+.ItemDetail{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: black;
+    height: 600px;
+}
+
+.ItemDetail-img img{
+    height: 500px;
+    width: 500px;
+    margin-top: 50px;
+    display: flex;
+    align-items: initial;
+    margin-left: 25px;
+    border: solid 4px #BBA44F; 
+}
+
+.ItemDetail-detail{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px 0px 0px 0px;
+}
+.ItemDetail-detail h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #BBA44F;
+    font-family: 'Raleway', sans-serif;
+}
+
+.ItemDetail-detail p{
+    color: #BBA44F;
+    font-size: medium;
+    font-weight: bolder;
+    display: flex;
+    text-align: start;
+    font-family: 'Raleway', sans-serif;
+    width: 70%;
+}
+
+.ItemDetail-detail h4{
+    color: #BBA44F;
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: 'Raleway', sans-serif;
+}

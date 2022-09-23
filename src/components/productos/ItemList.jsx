@@ -1,12 +1,12 @@
 import React from 'react'
-import Card from './Item'
+import Item from './Item'
 
 function ItemList(props) {
   return (
     <div>
         {props.data.map ((item) => {
             return( 
-                <Card
+                <Item
                     key ={item.id}
                     img={item.img}
                     title={item.title}
