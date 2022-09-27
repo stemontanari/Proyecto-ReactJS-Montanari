@@ -8,10 +8,12 @@ function ItemList(props) {
             return( 
                 <Item
                     key ={item.id}
+                    id= {item.id}
                     img={item.img}
                     title={item.title}
                     detail={item.detail}
                     price={item.price}
+                    cat={item.category}
                 />
             );
         })}

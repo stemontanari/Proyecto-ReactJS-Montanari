@@ -2,16 +2,16 @@
     display: grid;
     grid-template-columns: 40% 60%;
     background-color: black;
-    height: 600px;
+    height: 550px;
 }
 
 .ItemDetail-img img{
-    height: 500px;
-    width: 500px;
+    height: 450px;
+    width: 450px;
     margin-top: 50px;
     display: flex;
     align-items: initial;
-    margin-left: 25px;
+    margin-left: 50px;
     border: solid 4px #BBA44F; 
 }
 

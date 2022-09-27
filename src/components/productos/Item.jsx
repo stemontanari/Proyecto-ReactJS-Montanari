@@ -1,8 +1,12 @@
 import "./item.css"
-import ItemCounter from "../itemCounter/ItemCounter"
+import Button from "../button/Button";
+import {Link} from "react-router-dom"
 
 function Item(props) {
-    let {title, detail, price, img} = props;
+    let {title, detail, price, img, id} = props;
+
+    const urlDetalle = `/calzado/${id}`;
+
     return(
         <div className="Item">
             <div className="Item-img">
@@ -13,7 +17,9 @@ function Item(props) {
                 <p> {detail}</p>
                 <h4> $ {price} </h4>
             </div>
-            <ItemCounter initial={1} stock={9}/>
+            <Link to={urlDetalle}> 
+                <Button text=" Ver Mas" />
+            </Link>
         </div>
     )
 }
