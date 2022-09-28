@@ -3,6 +3,7 @@ import Footer from './components/footer/Footer';
 import Header from './components/header/NavBar';
 import ItemListContainer from './components/productos/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import Cart from './components/cart/Cart'
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
@@ -23,6 +24,10 @@ function App() {
         <Route path='/categoria/:cat' element={
           <ItemListContainer/>
         }/>
+        <Route path='/cart' element={
+          <Cart/>
+        }/>
+
       </Routes>
       
       <Footer/>

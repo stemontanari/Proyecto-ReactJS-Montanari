@@ -14,6 +14,7 @@ function ItemList(props) {
                     detail={item.detail}
                     price={item.price}
                     cat={item.category}
+                    stock={item.stock}
                 />
             );
         })}

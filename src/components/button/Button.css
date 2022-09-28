@@ -10,7 +10,7 @@
 }
 
 .btn:hover {
-    background-color: black;
-    color: white;
+    background-color: #f7dc7b;
+    color: black;
     transition: 0.5s;
 }

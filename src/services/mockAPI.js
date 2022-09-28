@@ -3,7 +3,7 @@ const data = [
         id: 1,
         title: "Jordan 1 Rebellionaire",
         price: 32250,
-        stock : 6, 
+        stock : 10, 
         category: "High",
         img: "/assets/calzados/1.jpg",
         detail: "El Air Jordan 1 High OG 'Rebellionaire' presenta un diseño único que se relaciona con la mítica narrativa 'Prohibida' del calzado,  tienen todo lo que amas y necesitas."
