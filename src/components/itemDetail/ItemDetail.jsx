@@ -1,14 +1,14 @@
-import React from "react";
+import React, {useContext} from "react";
 import './itemDetail.css';
 import ItemCounter from '../itemCounter/ItemCounter'
-import Cart from '../cart/Cart'
+import {cartCtx} from '../../context/CartContext'
 
 function ItemDetail({data}) {
 
-    let estadoCart = false;
+    const {addItem} = useContext(cartCtx);
 
     function handleAddToCart(count) {
-        alert(`Agregaste al carrito ${count} productos!`)
+        addItem(data, count)
     }
 
   return(
@@ -20,7 +20,7 @@ function ItemDetail({data}) {
             <h2> Nike {data.title}</h2>
             <h4> $ {data.price} </h4>
             <p> {data.detail}</p>
-            { estadoCart === false? <ItemCounter className='ItemCounter' stock={data.stock} onAddToCart={handleAddToCart}/> : <Cart/>}
+            <ItemCounter className='ItemCounter' stock={data.stock} onAddToCart={handleAddToCart}/>
         </div>
     </div>
 )
