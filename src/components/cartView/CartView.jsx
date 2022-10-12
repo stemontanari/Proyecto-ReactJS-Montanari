@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 function CartView() {
     const context = useContext(cartCtx);
-    const {cart, deleteItem, emptyCart} = context;
+    const {cart, deleteItem, emptyCart, getItemPrice} = context;
 
     if (cart.length === 0) {
         return <Link to='/inicio'> <button className="CarritoVacio">Su carrito esta vacio... click para Seguir Comprando</button> </Link>;
@@ -21,17 +21,17 @@ function CartView() {
                         <h2 className='CartViewSuma1'> Suma</h2>
                 </div>
                 {cart.map((data) => (
-                    <div className='CartView'>
+                    <div key={data.id} className='CartView'>
                         <img src={data.img} alt="" className='CartViewImg'/>
                         <h2 className='CartViewTitle'>{data.title}</h2>
                         <h3 className='CartViewPrice'>${data.price}</h3>
                         <p className='CartViewCount'>{data.count}</p>
                         <p className='CartViewSuma'> ${data.price * data.count}</p>
-                        <button className='CartViewDelete' onClick={deleteItem}> X </button>
+                        <button className='CartViewDelete' onClick={ () => deleteItem(data.id)}> X </button>
                     </div>
                 ))}
                 <div>
-                    <span className='CartViewTotal'>TOTAL = </span>
+                    <span className='CartViewTotal'>TOTAL = ${getItemPrice()}</span>
                     <button className='CartViewDeleteAll' onClick={emptyCart}> Vaciar Carrito</button>
                 </div>
             </div>

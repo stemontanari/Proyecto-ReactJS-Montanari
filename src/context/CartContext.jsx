@@ -47,6 +47,7 @@ export default function CartContextProvider({children}) {
     return cart.reduce((acc, data) => acc += data.price * data.count , 0)
   }
 
+
   return (
     <cartCtx.Provider value={{cart, addItem, getTotalItemsInCart, isInCart, emptyCart, deleteItem,getItemPrice}}> {children} </cartCtx.Provider>
   );
