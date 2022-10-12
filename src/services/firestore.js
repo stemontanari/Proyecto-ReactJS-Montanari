@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import {getFirestore, collection, getDocs} from 'firebase/firestore'
+import {getFirestore, collection, getDocs,  doc, getDoc, query, where} from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: "AIzaSyBZx8yDDXVt7YX2kmkoHcOX5QwXp5CFGcw",
@@ -15,9 +15,35 @@ const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
 
 export async function getItems () {
-const miColleccion = collection ('Categoria High', firestore)
-let snapshotDB = await getDocs(miColleccion);
-return snapshotDB;
+const miColleccion = collection (firestore, 'Calzados' )
+let respuesta = await getDocs(miColleccion);
+
+let dataDocs = respuesta.docs.map ((documento) => {
+  let docFormateado = { ...documento.data(), id: documento.id}
+  return docFormateado
+});
+return dataDocs;
+}
+
+export async function getSingleItem (idParams ) {
+  const docRef = doc(firestore, 'Calzados', idParams);
+  const docSnapshot = await getDoc(docRef)
+
+  return {...docSnapshot.data(), id: docSnapshot.id}
+  
+}
+
+export async function getItemByCategory(catParams) {
+  const collectionRef = collection (firestore, 'Calzados');
+  const queryCategory = query(collectionRef, where("category", "==", catParams));
+
+  const respuesta = await getDocs (queryCategory);
+
+  let dataDocs = respuesta.docs.map ((documento) => {
+    let docFormateado = { ...documento.data(), id: documento.id}
+    return docFormateado
+  });
+  return dataDocs;
 }
 
 export default firestore;

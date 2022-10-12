@@ -3,7 +3,7 @@ import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { DotSpinner } from '@uiball/loaders'
 
-import getItems, { getItemsByCategory } from "../../services/mockAPI"
+import {getItems, getItemByCategory} from "../../services/firestore"
 
 
 function ItemListContainer(props) {
@@ -17,13 +17,11 @@ function ItemListContainer(props) {
         if (cat === undefined){
             getItems().then((respuestaDatos) => setData(respuestaDatos))
             .finally(() =>  setIsLoading(false))
-        }
-        else {
-            getItemsByCategory(cat)
-            .then((respuestaDatos) => setData(respuestaDatos))
+        } else {
+            getItemByCategory(cat)
+            .then((respuestaDatosFiltrados) => setData(respuestaDatosFiltrados))
             .finally(() =>  setIsLoading(false))
-        }
-        },[cat])
+        }} ,[cat])
 
     return (
         <div>
