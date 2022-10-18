@@ -1,10 +1,10 @@
 header{
-  background-color: black;
-  color: #BBA44F;
+  background-color: #EEEE;
+  color: black;
   height: 70px;
   display: grid;
-  grid-template-columns: 50% 20% 30%;
-  border-bottom: 2px solid #BBA44F;
+  grid-template-columns: 30% 50% 20%;
+  border-bottom: 3px solid black;
 }
 
 header ul{
@@ -23,7 +23,7 @@ header ul li{
 
 header ul li .link{
   text-decoration: none;
-  color: #BBA44F;
+  color: black;
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
 }
@@ -33,7 +33,7 @@ header li:before {
   height: 3px;
   width: 0%;
   color: white;
-  background-color: #BBA44F;
+  background-color: #d18227;
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -43,8 +43,9 @@ header li:hover::before {
   width: 100%; }
 
 .logo{
-  width: 70px;
+  width: 110px;
   height: 70px;
+  margin-left: 30%;
 }
 
 .icon{
@@ -55,7 +56,7 @@ header li:hover::before {
   margin-right: 10px;
   list-style: none;
   text-decoration: none;
-  color: #BBA44F;
+  color: black;
 }
 .iconoCarrito{
   width: 50px;
@@ -64,7 +65,7 @@ header li:hover::before {
 }
 
 .icon span{
-  color: #BBA44F ;
+  color: #d18227 ;
   font-weight: bolder;
   font-size: large;
   margin-top: 15px;

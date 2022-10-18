@@ -17,7 +17,7 @@ function NavBar() {
             <Link className="link" to="/categoria/Low">Categoria Low</Link>
           </li>
         </ul>
-        <Link to="/inicio" className="logo"><img src="https://systux.com.ar/julio/cool.svg" alt="logo"/></Link>
+        <Link to="/inicio" className="logo"><img className="logo" src="https://1000marcas.net/wp-content/uploads/2021/06/Foot-Shop-logo.png" alt="Logo"/></Link>
         <CartWidget/>
       </header>
     );

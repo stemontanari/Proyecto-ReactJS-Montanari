@@ -2,12 +2,12 @@ footer{
   height: 230px;
   width: 100%;
   list-style: none;
-  color: #BBA44F;
+  color: black;
   margin-top: 25px;
   cursor: pointer;
-  background-color: black;
+  background-color: #EEEE;
   text-align: center; 
-  border-top: 2px solid #BBA44F;
+  border-top: 3px solid black;
 }
 
 .titulo_footer {

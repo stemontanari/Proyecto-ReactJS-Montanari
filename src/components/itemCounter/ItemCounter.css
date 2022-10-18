@@ -1,5 +1,4 @@
 .itemCount{
-    border: 2px solid;
     border-radius: 5px;
     margin-top: 15px;
 }
@@ -28,5 +27,5 @@
 }
 
 .itemCount span{
-    color: #BBA44F;
+    color: black;
 }

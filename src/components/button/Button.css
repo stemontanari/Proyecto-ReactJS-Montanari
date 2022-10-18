@@ -1,16 +1,16 @@
 .btn{
     margin-bottom: 15px;
     padding: 5px 10px;
-    color: black;
+    color: #eeee;
     width: 150px;
     height: 30px;
-    background-color: #BBA44F;
+    background-color: black;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #f7dc7b;
+    background-color: #d15727;
     color: black;
     transition: 0.5s;
 }

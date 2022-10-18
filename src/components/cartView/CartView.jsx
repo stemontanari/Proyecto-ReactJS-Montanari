@@ -1,11 +1,14 @@
-import React, {useContext}  from 'react'
-import {cartCtx} from '../../context/CartContext';
+import React, {useContext} from 'react'
 import './CartView.css'
 import {Link} from "react-router-dom";
+import {cartCtx} from '../../context/CartContext';
+
+import CheckoutForm from '../checkoutForm/CheckoutForm';
 
 function CartView() {
+
     const context = useContext(cartCtx);
-    const {cart, deleteItem, emptyCart, getItemPrice} = context;
+    const {cart, getItemPrice, deleteItem, emptyCart} = context;
 
     if (cart.length === 0) {
         return <Link to='/inicio'> <button className="CarritoVacio">Su carrito esta vacio... click para Seguir Comprando</button> </Link>;
@@ -31,10 +34,12 @@ function CartView() {
                     </div>
                 ))}
                 <div>
-                    <span className='CartViewTotal'>TOTAL = ${getItemPrice()}</span>
+                    <span className='CartViewTotal'> El total de su compra es = ${getItemPrice()}</span>
                     <button className='CartViewDeleteAll' onClick={emptyCart}> Vaciar Carrito</button>
                 </div>
+                <CheckoutForm/>
             </div>
+            
           );  
       }
 }

@@ -4,7 +4,7 @@ body{
 }
 .App {
   text-align: center;
-  background-color: black;
+  background-color: #EEEE;
 }
 
 .App-logo {
@@ -26,7 +26,7 @@ body{
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #EEEE;
 }
 
 .App-link {

@@ -26,7 +26,7 @@ function ItemListContainer(props) {
     return (
         <div>
             {
-               isLoading && <h3 className='error'> <DotSpinner size={70} speed={0.8} color="#BBA44F" /> </h3>
+               isLoading && <h3 className='error'> <DotSpinner size={70} speed={0.8} color="black" /> </h3>
             }
             <h1> {greeting}</h1>
             <div className="main container">
