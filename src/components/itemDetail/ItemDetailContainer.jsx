@@ -30,11 +30,10 @@ function ItemDetailContainer() {
                     </div>
                     ) : (
                     <h3 className='error'> 
-                        <DotSpinner size={70} speed={0.8} color="#BBA44F" />
+                        <DotSpinner size={70} speed={0.8} color="black" />
                     </h3>
                 )}         
             </>
-
         )
     }
 

@@ -26,7 +26,7 @@ function ItemDetail({data}) {
             <h4> $ {data.price} </h4>
             <p> {data.detail}</p>
             { data.stock === 0 && <span className="ItemDetail-stock"> PRODUCTO SIN STOCK</span> }
-            { (isInCart) ? <Link to='/cart' className="goToCart"> Terminar mi compra</Link> : <ItemCounter className='ItemCounter' stock={data.stock} onAddToCart={handleAddToCart}/> }
+            { (isInCart) ? <div className="botonesDetail"><Link to='/cart' className="goToCart"> Ir Al Carrito </Link> <Link to='/inicio' className="goToMain"> Seguir Comprando </Link></div>  : <ItemCounter className='ItemCounter' stock={data.stock} onAddToCart={handleAddToCart}/> }
         </div>
     </div>
 )

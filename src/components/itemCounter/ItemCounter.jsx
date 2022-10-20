@@ -22,8 +22,7 @@ function ItemCount({stock, onAddToCart}) {
       <Button onClick={ () => onAddToCart(count)} text=" Agregar al carrito" />
     </div>
   </div>
-
-    );
-  }
+  );
+}
   
-  export default ItemCount;
+export default ItemCount;

@@ -25,7 +25,7 @@ export default function CartContextProvider({children}) {
   function getTotalItemsInCart() {
     let totalItems = 0;
     cart.forEach((data) => {
-        totalItems += data.count;
+      totalItems += data.count;
     });
     return totalItems;
   }

@@ -23,14 +23,17 @@ function ItemListContainer(props) {
             .finally(() =>  setIsLoading(false))
         }} ,[cat])
 
+        useEffect(() => {
+            setIsLoading(true)
+        }, [cat])
+
     return (
-        <div>
+        <div>  
+            <h1>{greeting}</h1>
+            <div>
             {
-               isLoading && <h3 className='error'> <DotSpinner size={70} speed={0.8} color="black" /> </h3>
+               isLoading ? <h3 className='error'> <DotSpinner size={75} speed={0.7} color="black" /> </h3> : <div className="main container"><ItemList data={data}/></div>
             }
-            <h1> {greeting}</h1>
-            <div className="main container">
-                <ItemList data={data}/>
             </div>
         </div>
     );

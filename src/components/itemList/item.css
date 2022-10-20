@@ -59,3 +59,9 @@
     font-family: 'Raleway', sans-serif;
     margin-bottom: 5px;
   }
+
+  .Spinner{
+    display: block;
+        margin: 0 auto;
+        border-color: #1A4D2E;
+  }

@@ -15,14 +15,14 @@ const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
 
 export async function getItems () {
-const miColleccion = collection (firestore, 'Calzados' )
-let respuesta = await getDocs(miColleccion);
+  const miColleccion = collection (firestore, 'Calzados' )
+  let respuesta = await getDocs(miColleccion);
 
-let dataDocs = respuesta.docs.map ((documento) => {
-  let docFormateado = { ...documento.data(), id: documento.id}
-  return docFormateado
-});
-return dataDocs;
+  let dataDocs = respuesta.docs.map ((documento) => {
+    let docFormateado = { ...documento.data(), id: documento.id}
+    return docFormateado
+  });
+  return dataDocs;
 }
 
 export async function getSingleItem (idParams ) {
