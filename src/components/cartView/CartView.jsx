@@ -17,11 +17,11 @@ function CartView() {
         return (
             <div>
                 <div className='CartView1'>
-                        <h2> </h2>
-                        <h2 className='CartViewTitle1'> Modelo</h2>
-                        <h2 className='CartViewPrice1'> Precio</h2>
-                        <h2 className='CartViewCount1'> Cantidad</h2>
-                        <h2 className='CartViewSuma1'> Suma</h2>
+                    <h2> </h2>
+                    <h2 className='CartViewTitle1'> Modelo</h2>
+                    <h2 className='CartViewPrice1'> Precio</h2>
+                    <h2 className='CartViewCount1'> Cantidad</h2>
+                    <h2 className='CartViewSuma1'> Suma</h2>
                 </div>
                 {cart.map((data) => (
                     <div key={data.id} className='CartView'>
@@ -40,8 +40,8 @@ function CartView() {
                 <CheckoutForm/>
             </div>
             
-          );  
-      }
+        );  
+    }
 }
 
 export default CartView

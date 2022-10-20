@@ -14,8 +14,7 @@ function CartWidget() {
         <FontAwesomeIcon icon={ iconList.faCartShopping } className="iconoCarrito" /> 
         <span>{getTotalItemsInCart() > 0 && getTotalItemsInCart()}</span>
       </Link>
-  
-  </div>
+    </div>
   )
 }
 

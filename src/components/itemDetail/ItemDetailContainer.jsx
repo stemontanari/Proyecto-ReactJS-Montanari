@@ -23,12 +23,16 @@ function ItemDetailContainer() {
     if (isLoading) {
         return (
             <>
-                {error ? (
+                {error 
+                ? 
+                (
                     <div>
                         <h2 className='error'>ERROR</h2>
                         <p className='error'>{error}</p>
                     </div>
-                    ) : (
+                ) 
+                : 
+                (
                     <h3 className='error'> 
                         <DotSpinner size={70} speed={0.8} color="black" />
                     </h3>
