@@ -10,9 +10,6 @@ function Footer() {
         </div>
         <li className="listado"> Contactanos!</li>
         <li className="listado"> Conocenos un poco mas!</li>
-        <div>
-          <p className="texto_footer">Futuro eCommerce destinado a la venta de zapatillas</p>
-        </div>
       </ul>
     </footer>
   );

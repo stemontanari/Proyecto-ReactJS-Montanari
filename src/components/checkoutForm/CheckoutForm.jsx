@@ -13,7 +13,7 @@ function CheckoutForm() {
 
     const context = useContext(cartCtx);
     const navigate = useNavigate()
-    const {cart, getTotalItemsInCart} = context;
+    const {cart, getTotalItemsInCart, emptyCart} = context;
 
     function handleCheckOut(event){
         event.preventDefault();
@@ -26,6 +26,7 @@ function CheckoutForm() {
         createBuyOrder(orderData).then( orderId=> {
             navigate(`/checkout/${orderId}`)
         })
+        emptyCart()
     }
 
     function inputChangeHandler(event) {
@@ -60,7 +61,7 @@ function CheckoutForm() {
                     value={dataForm.phone}
                     onChange={inputChangeHandler}
                     name="phone"
-                    type="text"
+                    type="number"
                     placeholder="Telefono"
                     required
                 />
@@ -73,15 +74,15 @@ function CheckoutForm() {
                     value={dataForm.email}
                     onChange={inputChangeHandler}
                     name="email"
-                    type="text"
+                    type="email"
                     placeholder="Email"
                     required
                 />
             </div>
-            <button className='CartViewDeleteAll' onClick={handleCheckOut}> Finalizar Compra</button>
+            <button className='CartViewDeleteAll' type='submit' onClick={handleCheckOut}> Finalizar Compra</button>
         </form>
     </div>
   )
 }
 
-export default CheckoutForm
+export default CheckoutForm;

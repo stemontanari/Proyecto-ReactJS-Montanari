@@ -33,7 +33,7 @@ header li:before {
   height: 3px;
   width: 0%;
   color: white;
-  background-color: #d18227;
+  background-color: #2774d1;
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -65,7 +65,7 @@ header li:hover::before {
 }
 
 .icon span{
-  color: #d18227 ;
+  color: #c92d2d ;
   font-weight: bolder;
   font-size: large;
   margin-top: 15px;
